@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Triangle.h"
-//#include "CyrIOS.h" // for Visual C++ 6.0
 using namespace std;
 int Menu();
 int GetNumber(int, int);
@@ -13,6 +12,7 @@ void IsIncluded(Triangle* [], int);
 int Triangle::count = 0;
 // ——————————————————— главная функция
 int main() {
+	setlocale(LC_ALL, "rus");
 	// Определения точек
 	Point p1(0, 0); Point p2(0.5, 1);
 	Point p3(1, 0); Point p4(0, 4.5);
@@ -42,7 +42,7 @@ int main() {
 }
 // ————————————————————— вывод меню
 int Menu() {
-	cout << "\n=============== Г л а в н о е м е н ю ===================" << endl;
+	cout << "\n=============== Главное меню ===================" << endl;
 	cout << "1 - вывести все объекты\t 3 - найти максимальный" << endl;
 	cout << "2 - переместить\t\t 4 - определить отношение включения" << endl;
 	cout << "\t\t 5 - выход" << endl;

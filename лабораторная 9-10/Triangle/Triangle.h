@@ -5,7 +5,8 @@ class Triangle {
 public:
 	Triangle(Point, Point, Point, const char*); // конструктор
 	Triangle(const char*); // конструктор пустого (нулевого) треугольника
-	~Triangle(); // деструктор
+	~Triangle();
+	// деструктор
 	Point Get_v1() const { return v1; } // ѕолучить значение v1
 	Point Get_v2() const { return v2; } // ѕолучить значение v2
 	Point Get_v3() const { return v3; } // ѕолучить значение v3

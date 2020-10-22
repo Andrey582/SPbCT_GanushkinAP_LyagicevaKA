@@ -1,4 +1,5 @@
-﻿#include <math.h>
+﻿#pragma warning(disable : 4996)
+#include <math.h>
 #include <iostream>
 #include <iomanip>
 #include <cstring>
@@ -11,7 +12,7 @@ Triangle::Triangle(Point _v1, Point _v2, Point _v3, const char* ident)
 	objID = new char[strlen(ident) + 1];
 	strcpy(objID, ident);
 	count++;
-	sprintf(buf, "Треугольник %d", count);
+	sprintf_s(buf, "Треугольник %d", count);
 	name = new char[strlen(buf) + 1];
 	strcpy(name, buf);
 	a = sqrt((v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y));
@@ -26,16 +27,15 @@ Triangle::Triangle(const char* ident) {
 	objID = new char[strlen(ident) + 1];
 	strcpy(objID, ident);
 	count++;
-	sprintf(buf, "Треугольник %d", count);
+	sprintf_s(buf, "Треугольник %d", count);
 	name = new char[strlen(buf) + 1];
 	strcpy(name, buf);
 	a = b = c = 0;
 	cout << "Constructor_2 for: " << objID
-		<< " (" << name << ")" << endl; // отладочный вывод }
-		// Деструктор
-
-	Triangle::~Triangle() 
-	{
+		<< " (" << name << ")" << endl;} // отладочный вывод 
+										
+										// Деструктор
+	Triangle::~Triangle() {
 		cout << "Destructor for: " << objID << endl;
 		delete[] objID;
 		delete[] name;
