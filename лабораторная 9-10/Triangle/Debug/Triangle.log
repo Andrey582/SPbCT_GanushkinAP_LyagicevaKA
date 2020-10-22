@@ -1,0 +1,11 @@
+﻿  Point.cpp
+  Main.cpp
+  Triangle.cpp
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(12,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(14,2): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(16,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(38,46): error C2059: синтаксическая ошибка: ;
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(27,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(29,2): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 9-10\Triangle\Triangle.cpp(31,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Создание кода...
