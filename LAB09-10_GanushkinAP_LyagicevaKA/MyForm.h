@@ -1,5 +1,5 @@
 #pragma once
-#include <math.h>
+
 namespace LAB0910GanushkinAPLyagicevaKA {
 
 	using namespace System;
@@ -23,6 +23,16 @@ namespace LAB0910GanushkinAPLyagicevaKA {
 			//
 		}
 
+		void stepen(long long a)
+		{
+			while (a < 9999999999999999)
+			{
+				listBox1->Items->Add(a);
+				a *= 3;
+			}
+			label4->Text += a;
+		}
+
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -36,9 +46,11 @@ namespace LAB0910GanushkinAPLyagicevaKA {
 		}
 	private: System::Windows::Forms::Label^ label1;
 	protected:
-	private: System::Windows::Forms::Label^ label2;
+
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::ListBox^ listBox1;
+
 
 	private:
 		/// <summary>
@@ -54,9 +66,9 @@ namespace LAB0910GanushkinAPLyagicevaKA {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -67,14 +79,6 @@ namespace LAB0910GanushkinAPLyagicevaKA {
 			this->label1->Size = System::Drawing::Size(286, 13);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Числа не выходящие за рамки 16-ти разрядной сетки:";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(31, 54);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(0, 13);
-			this->label2->TabIndex = 1;
 			// 
 			// label3
 			// 
@@ -93,14 +97,22 @@ namespace LAB0910GanushkinAPLyagicevaKA {
 			this->label4->Size = System::Drawing::Size(0, 13);
 			this->label4->TabIndex = 3;
 			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->Location = System::Drawing::Point(31, 44);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(283, 69);
+			this->listBox1->TabIndex = 4;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(721, 354);
+			this->ClientSize = System::Drawing::Size(450, 225);
+			this->Controls->Add(this->listBox1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -110,18 +122,9 @@ namespace LAB0910GanushkinAPLyagicevaKA {
 
 		}
 #pragma endregion
-	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		int i = 1;
-		double a = 3;
-		
-		while (pow(a, i) < pow(2, 16))
-		{
-			label2->Text += pow(a, i) + " ";
-			i++;
-		}
-		
-		label4->Text += pow(a, i);
-	
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e){
+		int a = 3;
+		stepen(a);
 	}
 	};
 }

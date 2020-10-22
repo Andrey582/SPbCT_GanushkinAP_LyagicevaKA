@@ -3,3 +3,8 @@ C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_
 C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB09-10_GanushkinAP_LyagicevaKA.pdb
 C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB0910GanushkinAPLyagicevaKA.MyForm.resources
 C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB09-10_GanushkinAP_LyagicevaKA.vcxproj.GenerateResource.cache
+C:\Users\КРИС\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB09-10_GanushkinAP_LyagicevaKA.vcxprojAssemblyReference.cache
+C:\Users\КРИС\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB0910GanushkinAPLyagicevaKA.MyForm.resources
+C:\Users\КРИС\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB09-10_GanushkinAP_LyagicevaKA.vcxproj.GenerateResource.cache
+C:\Users\КРИС\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB09-10_GanushkinAP_LyagicevaKA.exe
+C:\Users\КРИС\GitHub\SPbCT_GanushkinAP_LyagicevaKA\LAB09-10_GanushkinAP_LyagicevaKA\Debug\LAB09-10_GanushkinAP_LyagicevaKA.pdb
