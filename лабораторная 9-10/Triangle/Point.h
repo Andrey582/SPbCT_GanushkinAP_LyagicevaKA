@@ -1,12 +1,28 @@
 #ifndef POINT_H
 #define POINT_H
+//объ€вление перечислимой константы ORIENT
+enum ORIENT { LEFT, RIGHT, AHEAD, BEHIND, BETWEEN };
+//класс Point ссылаетс€ на класс Triangle, значит Triangle должен быть объ€влен до Point
+class Triangle;
+//создание класса Point
+
 class Point {
 public:
-	//  онструктор
-	Point(double _x = 0, double _y = 0) : x(_x), y(_y) {}
-	// ƒругие методы
-	void Show() const;
-public:
-	double x, y;
+    //конструктор с двум€ аргументами
+    Point(double _x = 0, double _y = 0) : x(_x), y(_y) {}// x=_x; y=_y;
+    Point operator +(Point&);//оператор-функци€ перегрузки оператора сложени€
+    Point operator -(Point&);//оператор-функци€ перегрузки оператора вычитани€
+    //определ€ет длину вектора точки в пол€рной системе координат
+    double Length() const;
+    //определ€ет положение точки относительно вектора, заданного двум€ точками
+   // ORIENT Classify(Point&, Point&) const;
+    //определ€ет, находитс€ ли точка внутри треугольника
+
+   // bool InTriangle(Triangle&) const;//объ€снить зачем параметр - ссылка???????????????
+    void Show() const;
+    void operator +=(Point&);//оператор-функци€ перегрузки оператора сложени€ с присваиванием
+//public:
+    double x, y;
 };
-#endif /* POINT_H */
+
+#endif /*POINT_H*/
