@@ -15,10 +15,10 @@ public:
     //определяет длину вектора точки в полярной системе координат
     double Length() const;
     //определяет положение точки относительно вектора, заданного двумя точками
-   // ORIENT Classify(Point&, Point&) const;
+    ORIENT Classify(Point&, Point&) const;
     //определяет, находится ли точка внутри треугольника
 
-   // bool InTriangle(Triangle&) const;//объяснить зачем параметр - ссылка???????????????
+    bool InTriangle(Triangle&) const;//объяснить зачем параметр - ссылка???????????????
     void Show() const;
     void operator +=(Point&);//оператор-функция перегрузки оператора сложения с присваиванием
 //public:

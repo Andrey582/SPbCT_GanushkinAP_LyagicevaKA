@@ -26,7 +26,7 @@ double Point::Length() const {
     return sqrt(x * x + y * y);
 }
 
-/*ORIENT Point::Classify(Point& beg_p, Point& end_p) const {
+ORIENT Point::Classify(Point& beg_p, Point& end_p) const {
     Point p0 = *this;
     Point a = end_p - beg_p;
     Point b = p0 - beg_p;
@@ -42,9 +42,9 @@ double Point::Length() const {
 
 bool Point::InTriangle(Triangle& tria) const {
     ORIENT or1 = Classify(tria.Get_v1(), tria.Get_v2());
-    ORIENT or2 = Classify(tria.Get_v2(), tria.Get_v3());
-    ORIENT or3 = Classify(tria.Get_v3(), tria.Get_v1());
+    ORIENT or2 = BETWEEN;
+    ORIENT or3 = BETWEEN;
     if ((or1 == RIGHT) || (or1 == BETWEEN) && (or2 == RIGHT) || (or2 == BETWEEN) && (or3 == RIGHT) || (or3 == BETWEEN))
         return true;
     else return false;
-} */
+}

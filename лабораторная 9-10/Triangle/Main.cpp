@@ -18,7 +18,7 @@ void Show(Triangle* [], int);
 double GetDouble();
 void Move(Triangle* [], int);
 void FindMax(Triangle* [], int);
-//void IsIncluded(Triangle* [], int);
+void IsIncluded(Triangle* [], int);
 
 
 
@@ -58,7 +58,7 @@ int main()
         case 1:Show(pTria, n);  break;
         case 2:Move(pTria, n);  break;
         case 3:FindMax(pTria, n);       break;
-       // case 4:IsIncluded(pTria, n);    break;
+        case 4:IsIncluded(pTria, n);    break;
         case 5:cout << "End." << endl;
             done = true; break;
         }
@@ -169,7 +169,7 @@ void FindMax(Triangle* p_tria[], int k) {
 
 //-----------------Определение отношения включения
 
-/*void IsIncluded(Triangle* p_tria[], int k) {
+void IsIncluded(Triangle* p_tria[], int k) {
     cout << "====Opredelit' otnoshenie vklu4enia====" << endl;
     cout << "Enter number of the first triangle (from 1 till " << k << "): ";
     int i1 = GetNumber(1, k) - 1;
@@ -183,4 +183,4 @@ void FindMax(Triangle* p_tria[], int k) {
     else
         cout << p_tria[i1]->GetName() << "is not included in - " << p_tria[i2]->GetName() << endl;
     ExitBack();
-} */
+}

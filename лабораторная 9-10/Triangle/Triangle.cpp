@@ -12,7 +12,6 @@ Triangle::Triangle(const Triangle& tria) :v1(tria.v1), v2(tria.v2), v3(tria.v3) 
     cout << "Copy constructor for: " << tria.objID << endl; //отладочный вывод
     objID = new char[strlen(tria.objID) + strlen("kopia") + 1];//выделяем динамическую память
     strcpy(objID, tria.objID); //копирует строку objID в строку tria.objID
-    strcat(objID, "(kopia)");       //объединяет строки objID и "(kopia)" в строку objID
     name = new char[strlen(tria.name) + 1];//функция strlen возвращает длину строки 
     strcpy(name, tria.name);
     a = tria.a;
@@ -87,8 +86,9 @@ bool Triangle::operator > (const Triangle& tria) const {
 
 Triangle::~Triangle() {
     cout << "Destructor for: " << objID << endl;
-    delete[] objID;// очистка динамической памяти 
     delete[] name;
+    delete[] objID;// очистка динамической памяти 
+   
 }
 
 
@@ -113,10 +113,10 @@ void Triangle::Move(Point dp) {
 
 //определить, входит ли треугольник tria1 в треугольник tria2
 
-/*bool TriaInTria(Triangle tria1, Triangle tria2) {
+bool TriaInTria(Triangle tria1, Triangle tria2) {
     Point v1 = tria1.Get_v1();
     Point v2 = tria1.Get_v2();
     Point v3 = tria1.Get_v3();
     return (v1.InTriangle(tria2) && v2.InTriangle(tria2) && v3.InTriangle(tria2));
-    return true;
-}*/
+    
+}
