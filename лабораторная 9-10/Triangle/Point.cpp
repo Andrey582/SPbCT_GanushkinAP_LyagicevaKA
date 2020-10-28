@@ -41,9 +41,12 @@ ORIENT Point::Classify(Point& beg_p, Point& end_p) const {
  
 
 bool Point::InTriangle(Triangle& tria) const {
-    ORIENT or1 = Classify(tria.Get_v1(), tria.Get_v2());
-    ORIENT or2 = BETWEEN;
-    ORIENT or3 = BETWEEN;
+    Point a = tria.Get_v1();
+    Point b = tria.Get_v2();
+    Point c = tria.Get_v3();
+    ORIENT or1 = Classify(a, b);
+    ORIENT or2 = Classify(b, c);
+    ORIENT or3 = Classify(c, a);
     if ((or1 == RIGHT) || (or1 == BETWEEN) && (or2 == RIGHT) || (or2 == BETWEEN) && (or3 == RIGHT) || (or3 == BETWEEN))
         return true;
     else return false;
