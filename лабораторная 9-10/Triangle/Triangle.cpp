@@ -9,8 +9,8 @@ using namespace std;
 //конструктор копирования
 
 Triangle::Triangle(const Triangle& tria) :v1(tria.v1), v2(tria.v2), v3(tria.v3) {
-    cout << "Copy constructor for: " << tria.objID << endl; //отладочный вывод
-    objID = new char[strlen(tria.objID) + strlen("kopia") + 1];//выделяем динамическую память
+    cout << "Конструктор копирования для: " << tria.objID << endl; //отладочный вывод
+    objID = new char[strlen(tria.objID) + strlen("копия") + 1];//выделяем динамическую память
     strcpy(objID, tria.objID); //копирует строку objID в строку tria.objID
     name = new char[strlen(tria.name) + 1];//функция strlen возвращает длину строки 
     strcpy(name, tria.name);
@@ -24,7 +24,7 @@ Triangle::Triangle(const Triangle& tria) :v1(tria.v1), v2(tria.v2), v3(tria.v3) 
 //оператор-функция, присвоить значение объекта tria
 
 Triangle& Triangle::operator=(const Triangle& tria) {
-    cout << "Assign operator: " << objID << "=" << tria.objID << endl; //отладочныйы вывод
+    cout << "Назначение оператора: " << objID << "=" << tria.objID << endl; //отладочныйы вывод
     if (&tria == this) return *this;
     delete[] name;
     name = new char[strlen(tria.name) + 1];
@@ -50,7 +50,7 @@ Triangle::Triangle(Point _v1, Point _v2, Point _v3, const char* ident) : v1(_v1)
     a = sqrt((v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y));
     b = sqrt((v2.x - v3.x) * (v2.x - v3.x) + (v2.y - v3.y) * (v2.y - v3.y));
     c = sqrt((v1.x - v3.x) * (v1.x - v3.x) + (v1.y - v3.y) * (v1.y - v3.y));
-    cout << "Constructor_1 for: " << objID << " (" << name << ")" << endl;//отладочный вывод
+    cout << "Конструктор_1 для: " << objID << " (" << name << ")" << endl;//отладочный вывод
 }
 
 
@@ -62,11 +62,11 @@ Triangle::Triangle(const char* ident) {
     objID = new char[strlen(ident) + 1];
     strcpy(objID, ident);
     count++;//добавить объект
-    sprintf(buf, "Triangle %d", count);//выполняет форматированный вывод в строку
+    sprintf(buf, "Треугольник %d", count);//выполняет форматированный вывод в строку
     name = new char[strlen(buf) + 1];
     strcpy(name, buf);
     a = b = c = 0;
-    cout << "Constructor_2 for: " << objID << " (" << name << ")" << endl; //отладочный вывод
+    cout << "Конструктор_2 для: " << objID << " (" << name << ")" << endl; //отладочный вывод
 }
 
 
@@ -85,7 +85,7 @@ bool Triangle::operator > (const Triangle& tria) const {
 //Деструктор
 
 Triangle::~Triangle() {
-    cout << "Destructor for: " << objID << endl;
+    cout << "Деструктор для: " << objID << endl;
     delete[] name;
     delete[] objID;// очистка динамической памяти 
    
