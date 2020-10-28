@@ -31,9 +31,8 @@ int Triangle::count = 0;
 //--------------------главная функция
 
 int main()
-
 {
-
+    setlocale(LC_ALL, "rus");
     //определение координат точек
     Point p1(0, 0); Point p2(0.5, 1);
     Point p3(1, 0); Point p4(0, 4.5);
@@ -59,7 +58,7 @@ int main()
         case 2:Move(pTria, n);  break;
         case 3:FindMax(pTria, n);       break;
         case 4:IsIncluded(pTria, n);    break;
-        case 5:cout << "End." << endl;
+        case 5:cout << "Конец" << endl;
             done = true; break;
         }
 
@@ -72,10 +71,10 @@ int main()
 int Menu()
 
 {
-    cout << "n============M A I N   M E N U==========" << endl;
-    cout << "1 - Show all objectst 3 - Find max" << endl;
-    cout << "2 - Movett 4 - Is included in" << endl;
-    cout << "tt5 - Exit" << endl;
+    cout << "n============ ГЛАВНОЕ МЕНЮ ==========" << endl;
+    cout << "1 - Показать все объекты 3 - Найти максимальный" << endl;
+    cout << "2 - Передвинуть 4 - Проверить включения" << endl;
+    cout << "\t\t5 - Выход" << endl;
     return GetNumber(1, 5);
 }
 
@@ -88,7 +87,7 @@ int GetNumber(int min, int max) {
         if ((number >= min) && (number <= max) && (cin.peek() == '\n'))
             break;
         else {
-            cout << "Retry (number must be from " << min << " till " << max << "):" << endl;
+            cout << "Повторите (число должно быть от " << min << " до " << max << "):" << endl;
             cin.clear();//очистить биты ошибок
             while (cin.get() != '\n') {}// cin.get извлекает один символ
         }
@@ -100,14 +99,14 @@ int GetNumber(int min, int max) {
 //-----------------возврат в функцию с основным меню
 
 void ExitBack() {
-    cout << "Push Enter." << endl;
+    cout << "Нажми Enter." << endl;
     cin.get(); cin.get();
 }
 
 //-----------------вывод всех треугольников
 
 void Show(Triangle* p_tria[], int k) {
-    cout << "==========Triangles==========" << endl;
+    cout << "==========Треугольники==========" << endl;
     for (int i = 0; i < k; ++i) p_tria[i]->Show();//вызов метода Show() для объекта класса Triangle
     ExitBack();
 }
@@ -122,7 +121,7 @@ double GetDouble()
         cin >> value;
         if (cin.peek() == '\n') break;//cin.peek читает один символ, оставляя его в потоке
         else {
-            cout << "Retry (number must be ves4estvennoe):" << endl;
+            cout << "Повторите (число должно быть вещественным):" << endl;
             cin.clear();
             while (cin.get() != '\n') {};
         }
@@ -134,17 +133,17 @@ double GetDouble()
 //-----------------перемещение
 
 void Move(Triangle* p_tria[], int k) {
-    cout << "==========Move============" << endl;
-    cout << "Enter number of triangle (from 1 till " << k << "): ";
+    cout << "==========Передвинуть============" << endl;
+    cout << "Введите номер треугольника (от 1 до " << k << "): ";
     int i = GetNumber(1, k) - 1;
     p_tria[i]->Show();//вызов метода Show() для объекта класса Triangle
     Point dp;
-    cout << "Enter smeschenie po x: ";
+    cout << "Введите смещение по x: ";
     dp.x = GetDouble();
-    cout << "Enter smeschenie po y: ";
+    cout << "Введите смещение по y: ";
     dp.y = GetDouble();
     p_tria[i]->Move(dp);//вызов метода Move() для объекта класса Triangle
-    cout << "New place of triangle: " << endl;
+    cout << "Новое местоположение треугольника: " << endl;
     p_tria[i]->Show();//вызов метода Show() для объекта класса Triangle
     ExitBack();
 }
@@ -153,7 +152,7 @@ void Move(Triangle* p_tria[], int k) {
 
 void FindMax(Triangle* p_tria[], int k) {
 
-    cout << "====Find max triangle====" << endl;
+    cout << "====Найти максимальный треугольник====" << endl;
     /*Создаем объект TriaMax, который по завершении поиска будет идентичен максимальному объекту
 
     Инициализируем его значением 1-го объекта из массива объектов*/
@@ -163,24 +162,24 @@ void FindMax(Triangle* p_tria[], int k) {
     for (int i = 1; i < 4; ++i)
         if (*p_tria[i] > triaMax)
             triaMax = *p_tria[i];
-    cout << "Max triangle is: " << triaMax.GetName() << endl;
+    cout << "Максимальный треугольник: " << triaMax.GetName() << endl;
     ExitBack();
 }
 
 //-----------------Определение отношения включения
 
 void IsIncluded(Triangle* p_tria[], int k) {
-    cout << "====Opredelit' otnoshenie vklu4enia====" << endl;
-    cout << "Enter number of the first triangle (from 1 till " << k << "): ";
+    cout << "====Определить отношение включения====" << endl;
+    cout << "Введите номер первого треугольника (от 1 до " << k << "): ";
     int i1 = GetNumber(1, k) - 1;
-    cout << "Enter number of the second triangle (from 1 till " << k << "): ";
+    cout << "Введите номер второго треугольника (от 1 до " << k << "): ";
     int i2 = GetNumber(1, k) - 1;
     if (TriaInTria(*p_tria[i1], *p_tria[i2]))//вызов дружественной функции
             //вызываем метод GetName() для объекта класса Triangle, на который указывает указатель,
 
             //являющийся i1 и i2 элементом соответственно массива p_tria
-        cout << p_tria[i1]->GetName() << " - is included in - " << p_tria[i2]->GetName() << endl;
+        cout << p_tria[i1]->GetName() << " - входит в - " << p_tria[i2]->GetName() << endl;
     else
-        cout << p_tria[i1]->GetName() << "is not included in - " << p_tria[i2]->GetName() << endl;
+        cout << p_tria[i1]->GetName() << " - не входит в - " << p_tria[i2]->GetName() << endl;
     ExitBack();
 }

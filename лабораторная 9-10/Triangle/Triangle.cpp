@@ -44,7 +44,7 @@ Triangle::Triangle(Point _v1, Point _v2, Point _v3, const char* ident) : v1(_v1)
     objID = new char[strlen(ident) + 1];
     strcpy(objID, ident);
     count++;//добавить объект
-    sprintf(buf, "Triangle %d", count);
+    sprintf(buf, "Треугольник %d", count);
     name = new char[strlen(buf) + 1];
     strcpy(name, buf);
     a = sqrt((v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y));
