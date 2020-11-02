@@ -73,9 +73,9 @@ public:
 		return value;
 	}
 
-	bool empty()
+	bool operator() ()
 	{
-		if (top != size - 1) 
+		if (top != size - 1)
 		{
 			return true;
 		}
@@ -83,7 +83,7 @@ public:
 		{
 			return false;
 		}
-	};
+	}
 
 	void printStack() {
 		for (int i = top + 1; i < size; i++)
@@ -104,6 +104,9 @@ int main()
 	a + 10;
 	a + 2222;
 	--a;
-	a.printStack();
+	if (a())
+		a.printStack();
+	else
+		cout << "Стек пустой";
 	return 0;
 }
