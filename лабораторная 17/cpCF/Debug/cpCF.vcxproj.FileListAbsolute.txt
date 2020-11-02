@@ -1,0 +1,2 @@
+C:\Users\Андрей\source\repos\cpCF\Debug\cpCF.exe
+C:\Users\Андрей\source\repos\cpCF\Debug\cpCF.pdb

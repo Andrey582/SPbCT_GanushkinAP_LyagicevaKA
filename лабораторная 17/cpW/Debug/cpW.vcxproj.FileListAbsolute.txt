@@ -1,0 +1,2 @@
+C:\Users\Андрей\source\repos\cpW\Debug\cpW.exe
+C:\Users\Андрей\source\repos\cpW\Debug\cpW.pdb
