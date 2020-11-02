@@ -49,19 +49,20 @@ public:
 		delete[] stackPtr;
 	};
 
-	void operator +(T value)
+	Stack& operator +(T value)
 	{
 		stackPtr[top] = value;
 		top--;
+		return *this;
 	}
 
 	Stack& operator =(const Stack& other)
 	{
-		stackPtr = new T[other.size];
 		for (int i = 0; i < size; i++)
 			{
 				stackPtr[i] = other.stackPtr[i];
 			}
+		this->top = other.top;
 		return *this;
 	}
 
@@ -98,15 +99,48 @@ public:
 int main()
 {
 	setlocale(LC_ALL, "rus");
+	cout << "Проверка на int" << endl;
 	Stack <int> a;
-	a + 3;
-	a + 5;
-	a + 10;
-	a + 2222;
+	a + 3 + 5 + 10 + 13 + 2;
 	--a;
 	if (a())
 		a.printStack();
 	else
 		cout << "Стек пустой";
+
+	cout << "\n\nПроверка операции присваивания для int" << endl;
+	Stack <int> a2;
+	a2 = a;
+	a2.printStack();
+
+
+	cout << "\n\n\nПроверка на string" << endl;
+	Stack <string> b;
+	b + "hello" + "how are you" + "great" + "aloha";
+	--b;
+	if (b())
+		b.printStack();
+	else
+		cout << "Стек пустой";
+
+	cout << "\n\nПроверка операции присваивания для string" << endl;
+	Stack <string> b2;
+	b2 = b;
+	b2.printStack();
+
+
+	cout << "\n\n\nПроверка на double" << endl;
+	Stack <double> c;
+	c + 3.4 + 5.10 + 10.13 + 13.25 + 2.10;
+	--c;
+	if (c())
+		c.printStack();
+	else
+		cout << "Стек пустой";
+
+	cout << "\n\nПроверка операции присваивания для double" << endl;
+	Stack <double> c2;
+	c2 = c;
+	c2.printStack();
 	return 0;
 }
