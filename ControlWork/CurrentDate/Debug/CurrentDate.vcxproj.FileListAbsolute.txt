@@ -1,0 +1,4 @@
+C:\Users\Андрей\source\repos\CurrentDate\Debug\CurrentDate.exe
+C:\Users\Андрей\source\repos\CurrentDate\Debug\CurrentDate.pdb
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\ControlWork\CurrentDate\Debug\CurrentDate.exe
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\ControlWork\CurrentDate\Debug\CurrentDate.pdb
