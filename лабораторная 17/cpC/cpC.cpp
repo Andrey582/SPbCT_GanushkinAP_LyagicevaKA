@@ -6,9 +6,9 @@
 int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "rus");
-	FILE* in_file, * out_file; char rec
-		[BUF_SIZE]; size_t bytes_in,
-		bytes_out;
+	FILE* in_file, * out_file;
+	char rec [BUF_SIZE];
+	size_t bytes_in, bytes_out;
 	if (argc != 3)
 	{
 		printf("Использование: Cрc file1 File2\n");

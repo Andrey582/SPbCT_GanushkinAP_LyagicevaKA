@@ -1,9 +1,8 @@
 ﻿  cpW.cpp
-C:\Users\Андрей\source\repos\cpW\cpW.cpp(19,10): warning C4476: "printf": неизвестный символ поля типа "\xd1" в описателе формата
-C:\Users\Андрей\source\repos\cpW\cpW.cpp(19,98): warning C4474: "printf" : для строки формата передано слишком много аргументов
-C:\Users\Андрей\source\repos\cpW\cpW.cpp(19,98): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-C:\Users\Андрей\source\repos\cpW\cpW.cpp(26,10): warning C4476: "printf": неизвестный символ поля типа "\xd1" в описателе формата
-C:\Users\Андрей\source\repos\cpW\cpW.cpp(26,100): warning C4474: "printf" : для строки формата передано слишком много аргументов
-C:\Users\Андрей\source\repos\cpW\cpW.cpp(26,100): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  LINK : не найден или не выполнена сборка C:\Users\Андрей\source\repos\cpW\Debug\cpW.exe при последней инкрементной компоновке; выполняется полная компоновка
-  cpW.vcxproj -> C:\Users\Андрей\source\repos\cpW\Debug\cpW.exe
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\cpW.cpp(19,10): warning C4476: "printf": неизвестный символ поля типа "\xd1" в описателе формата
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\cpW.cpp(19,97): warning C4474: "printf" : для строки формата передано слишком много аргументов
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\cpW.cpp(19,97): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\cpW.cpp(26,10): warning C4476: "printf": неизвестный символ поля типа "\xd1" в описателе формата
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\cpW.cpp(26,99): warning C4474: "printf" : для строки формата передано слишком много аргументов
+C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\cpW.cpp(26,99): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+  cpW.vcxproj -> C:\Users\Андрей\GitHub\SPbCT_GanushkinAP_LyagicevaKA\лабораторная 17\cpW\Debug\cpW.exe
