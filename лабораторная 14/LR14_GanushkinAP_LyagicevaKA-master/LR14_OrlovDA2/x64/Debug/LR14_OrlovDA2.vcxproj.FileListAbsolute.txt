@@ -1,0 +1,3 @@
+C:\Users\MooN\Desktop\LR14_OrlovDA2-master\LR14_OrlovDA2\x64\Debug\LR14_OrlovDA2.vcxprojAssemblyReference.cache
+C:\Users\MooN\Desktop\LR14_OrlovDA2-master\LR14_OrlovDA2\x64\Debug\LR14OrlovDA2.MyForm.resources
+C:\Users\MooN\Desktop\LR14_OrlovDA2-master\LR14_OrlovDA2\x64\Debug\LR14_OrlovDA2.vcxproj.GenerateResource.cache
